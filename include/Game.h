@@ -1,12 +1,17 @@
 
 #include <string>
 
-using namespace std;
+using std::string;
 
-Class Game{
+class Game{
 public:
-    Game(int w, int h, String layout);
-    ~Game();
+    Game(int w, int h, string layout);
+    Game(){}
+    ~Game(){}
+    int verify_ut(int i, int j) {
+        return i + j;
+    }
+
 private:
     int width;
     int height;

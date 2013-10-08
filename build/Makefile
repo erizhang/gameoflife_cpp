@@ -8,7 +8,7 @@ HEADER=../include
 
 CXXFLAGS += -g -Wall -Wextra -pthread
 
-SRCS_=$(SRC)/*.cpp $(HEADER)
+SRC_=$(SRC)/*.cpp $(HEADER)
 
 main.o : $(SRC_)
 	$(CXX) $(CXXFLAGS) -I$(HEADER) -c $(SRC)/main.cpp
