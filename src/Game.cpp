@@ -168,6 +168,10 @@ string Game::nextGeneration()
         if (count < 2 || count > 3) {
             cell->Die();
         }
+
+        if (count == 3 && !cell->isAlive()) {
+            cell->Live();
+        }
     }
     this->render();
 
