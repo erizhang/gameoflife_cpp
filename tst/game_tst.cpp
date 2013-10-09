@@ -39,6 +39,10 @@ namespace {
         EXPECT_EQ("000000000", g.nextGeneration());
     }
 
+    TEST_F(GameTest, SurvieUnderTwoNeighbors){
+        Game g(3, 3, "010101010");
+        EXPECT_EQ("010101010", g.nextGeneration());
+    }
 
 }//namespace
 
