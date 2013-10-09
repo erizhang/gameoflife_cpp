@@ -24,8 +24,8 @@ namespace {
         }
     };
 
-    TEST_F(GameTest, ConfirmUTSetUp){
-        Game g;//(0, 0, "test");
+    TEST_F(GameTest, NoneAliveCells){
+        Game g;
         EXPECT_EQ("000000000", g.nextGeneration());
     }
 
