@@ -8,9 +8,7 @@ public:
     Game(int w, int h, string layout);
     Game(){}
     ~Game(){}
-    int verify_ut(int i, int j) {
-        return i + j;
-    }
+    string nextGeneration();
 
 private:
     int width;
