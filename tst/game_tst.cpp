@@ -52,6 +52,11 @@ namespace {
         EXPECT_EQ("000000001100010010001010000100000000", g.nextGeneration());
     }
 
+    TEST_F(GameTest, ChangeInToadStyle){
+        Game g(6, 6, "000000000000001110011100000000000000");
+        EXPECT_EQ("000000000100010010010010001000000000", g.nextGeneration());
+    }
+
 }//namespace
 
 
