@@ -26,8 +26,10 @@ namespace {
 
     TEST_F(GameTest, ConfirmUTSetUp){
         Game g;//(0, 0, "test");
-        EXPECT_EQ(3, g.verify_ut(1, 2));
+        EXPECT_EQ("000000000", g.nextGeneration());
     }
+
+
 }//namespace
 
 

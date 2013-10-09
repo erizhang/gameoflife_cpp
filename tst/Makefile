@@ -71,8 +71,11 @@ gtest_main.a : gtest-all.o gtest_main.o
 # gtest_main.a, depending on whether it defines its own main()
 # function.
 
+Game.o : $(USER_DIR)/src/Game.cpp $(USER_DIR)/include/*.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I$(USER_DIR)/include -c $(USER_DIR)/src/Game.cpp
+
 game_tst.o : $(USER_DIR)/tst/game_tst.cpp $(USER_DIR)/include/*.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I$(USER_DIR)/include -c $(USER_DIR)/tst/game_tst.cpp
 
-gameoflife_ut : game_tst.o gtest_main.a
+gameoflife_ut : game_tst.o Game.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
