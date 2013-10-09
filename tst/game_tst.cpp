@@ -16,11 +16,9 @@ namespace {
         }
        
         virtual void SetUp(){
-            cout<<"Game Test Suite SetUp"<<endl;
         }
 
         virtual void TearDown(){
-            cout<<"Game Test Suite TearDown"<<endl;
         }
     };
 
