@@ -42,6 +42,16 @@ namespace {
         EXPECT_EQ("010101010", g.nextGeneration());
     }
 
+    TEST_F(GameTest, SurvieUnderBlockStyle){
+        Game g(4, 4, "0000011001100000");
+        EXPECT_EQ("0000011001100000", g.nextGeneration());
+    }
+
+    TEST_F(GameTest, SurvieUnderLoafStyle){
+        Game g(6, 6, "000000001100010010001010000100000000");
+        EXPECT_EQ("000000001100010010001010000100000000", g.nextGeneration());
+    }
+
 }//namespace
 
 

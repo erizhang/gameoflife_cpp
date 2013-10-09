@@ -171,7 +171,7 @@ string Game::nextGeneration()
     }
     this->render();
 
-    return m_gameLayout;//"000000000";
+    return m_gameLayout;
 }
 
 
