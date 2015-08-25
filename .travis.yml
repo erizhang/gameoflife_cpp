@@ -3,4 +3,4 @@ compiler:
   - gcc
   - clang
 # Change this to your needs
-script: cd tst/;make;./gameoflife_ut
+script: cd tst/;make
